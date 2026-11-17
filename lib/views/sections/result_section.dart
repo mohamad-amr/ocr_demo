@@ -6,15 +6,9 @@ import '../widgets/pdf_viewer.dart';
 import '../widgets/result_toolbar.dart';
 
 class ResultSection extends StatelessWidget {
-  const ResultSection({
-    super.key,
-    required this.name,
-    required this.bytes,
-    this.previewHeight = 520,
-  });
+  const ResultSection({super.key, required this.name, required this.bytes});
   final String name;
   final Uint8List bytes;
-  final double previewHeight;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +19,7 @@ class ResultSection extends StatelessWidget {
         children: [
           ResultToolbar(name: name),
           const SizedBox(height: 16),
-          PdfViewer(bytes: bytes, height: previewHeight),
+          PdfViewer(bytes: bytes),
         ],
       ),
     );

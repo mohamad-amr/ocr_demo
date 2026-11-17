@@ -13,15 +13,15 @@ class PickedSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final cubit = context.read<OcrCubit>();
     return SizedBox(
-      width: 480,
+      width: double.infinity,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           FileChip(name: name),
           const SizedBox(height: 24),
           PrimaryButton(
-            label: 'Generate demo result',
-            icon: Icons.auto_awesome_rounded,
+            label: 'Mark my worksheet',
+            icon: Icons.edit_note_rounded,
             onTap: () => cubit.process(),
           ),
           const SizedBox(height: 8),

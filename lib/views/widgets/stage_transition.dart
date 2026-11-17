@@ -8,10 +8,10 @@ class StageTransition extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedSize(
-      duration: const Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 240),
       curve: Curves.easeOutCubic,
       child: AnimatedSwitcher(
-        duration: const Duration(milliseconds: 400),
+        duration: const Duration(milliseconds: 200),
         switchInCurve: Curves.easeOutCubic,
         switchOutCurve: Curves.easeIn,
         transitionBuilder: (child, anim) => FadeTransition(

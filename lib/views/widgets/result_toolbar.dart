@@ -14,7 +14,7 @@ class ResultToolbar extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text(
-          'Demo result ready',
+          'Your marked worksheet',
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
         ),
         const SizedBox(height: 6),
@@ -30,7 +30,7 @@ class ResultToolbar extends StatelessWidget {
           crossAxisAlignment: WrapCrossAlignment.center,
           children: [
             PrimaryButton(
-              label: 'Download PDF',
+              label: 'Download marked PDF',
               icon: Icons.download_rounded,
               onTap: () => cubit.download(),
               compact: true,

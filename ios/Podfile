@@ -1,5 +1,18 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '13.0'
+platform :ios, '15.0'
+
+# AppCheck is published as 12.19.0, while firebase_core defaults to 12.19.3.
+# Use the shared 12.19 patch range so CocoaPods can resolve both components.
+$FirebaseSDKVersion = '12.19.0'
+
+# Opt-in workaround for CDN HTTP/2 framing failures on some networks.
+# Usage: COCOAPODS_USE_HTTP1=1 pod install --repo-update
+if ENV['COCOAPODS_USE_HTTP1'] == '1'
+  require 'typhoeus'
+  Typhoeus.before do |request|
+    request.options[:http_version] = :httpv1_1
+  end
+end
 
 # CocoaPods analytics sends network stats synchronously affecting flutter build latency.
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'

@@ -31,6 +31,7 @@ class PrimaryButton extends StatelessWidget {
             backgroundColor: Colors.white,
             foregroundColor: Colors.black,
             textStyle: const TextStyle(
+              fontFamily: 'Geist',
               fontSize: 14,
               fontWeight: FontWeight.w700,
             ),
